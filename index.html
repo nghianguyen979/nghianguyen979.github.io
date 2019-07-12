@@ -6,32 +6,29 @@
     <meta name="theme-color" content="#000000">
     <title>Web app testing </title>
     <script src="/zpdk.min.js"></script>
+    <script src="/testingComponent.js"></script>
   </head>
   <body>
     <style>
-      body > div {
-        word-break: break-all;
-        margin-bottom: 20px;
-      }
-    </style>
-    <script>
-     
-    function closeWindow() {
-      // var opt =       {
-      //   desc: 'scanARCode Tetholiday2019',
-      //   needResult: 1, // 0 by default, with the scanning result processed by ZaloPay. The scanning result is directly returned if it is 1.
-      //   scanType: ["qrCode"], // Scanning type, including QR code or bar code. Both by default.
-      //   success: function(res) {
-      //     alert("scan result: " + res.data.page + "::error code::" + res.error);
-      //   }
-      // };
-      ZaloPay.ready(() => {
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;   
+        }
+        </style>
     
-        ZaloPay.closeWindow();
-      });
-    }
-    
-  </script>
-   <button onclick="closeWindow()">Close WebView</button>
+
+    <h2>Demo webapp for testing</h2>
+    <p>Choose at least one funtion to test!</p>
+    <table style="width:100%">
+        <tr>
+          <td> <button onclick="closeWindow()">Close WebView</button></td>
+          <td> <button onclick="showLoading()">Show Loading</button></td>
+          <td> <button onclick="hideLoading()">Hide Loading</button></td>
+        </tr>
+      </table>
   </body>
 </html>
