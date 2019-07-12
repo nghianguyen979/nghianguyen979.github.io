@@ -37,7 +37,6 @@ function initializeWebBridge() {
       param: param
     });
     console.log("ZaloPayJSBridge.callNativeFunction: " + invokeMsg);
-    alert("ZaloPayJSBridge.callNativeFunction: " + invokeMsg);
     ZaloPayJSBridge.callNativeFunction("callback", invokeMsg);
   }
 
