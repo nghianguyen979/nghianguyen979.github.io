@@ -7,14 +7,26 @@
     <title>Web app testing </title>
     <script src="/zpdk.min.js"></script>
     <script src="/testingComponent.js"></script>
+    
+    <style>
+        table, th, td {
+          border: 0.5px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;   
+        }
+    </style>
   </head>
+  
   <body>
     <h2>Demo webapp for testing</h2>
     <p>Choose at least one funtion to test!</p>
     <table style="width:100%">
         <tr>
           <td> <button onclick="closeWindow()">Close WebView</button></td>
-          <td> <button onclick="showLoading()">Show Loading</button></td>
+          <td> <button onclick="showDialog()">Show Loading</button></td>
           <td> <button onclick="hideLoading()">Hide Loading</button></td>
         </tr>
       </table>
