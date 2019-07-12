@@ -17,7 +17,7 @@
     </style>
     <script>
      
-    function showLoading() {
+    function closeWindow() {
       // var opt =       {
       //   desc: 'scanARCode Tetholiday2019',
       //   needResult: 1, // 0 by default, with the scanning result processed by ZaloPay. The scanning result is directly returned if it is 1.
@@ -28,12 +28,12 @@
       // };
       ZaloPay.ready(() => {
     
-        ZaloPay.showLoading();
+        ZaloPay.closeWindow();
       });
     }
     
   </script>
-   <button onclick="showLoading()">Show Loading</button>
+   <button onclick="closeWindow()">Close WebView</button>
   </body>
 </html>
 
