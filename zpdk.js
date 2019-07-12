@@ -64,8 +64,7 @@
         }
       };
       'writeLog' !== name &&
-        writeLog('info', 'ZaloPayJSBridge.call', name, opt, _callback);
-      alert("ZaloPayJSBridge.call");
+      writeLog('info', 'ZaloPayJSBridge.call', name, opt, _callback);
       window.ZaloPayJSBridge.call(name, opt, cb);
     } else {
       ZaloPay._apiQueue = ZaloPay._apiQueue || [];
