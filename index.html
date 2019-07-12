@@ -1,4 +1,49 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>React App</title>
+    <script src="/zpdk.js"></script>
+  </head>
+  <body>
+    <style>
+      body > div {
+        word-break: break-all;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+     
+    function closeWebView() {
+      // var opt =       {
+      //   desc: 'scanARCode Tetholiday2019',
+      //   needResult: 1, // 0 by default, with the scanning result processed by ZaloPay. The scanning result is directly returned if it is 1.
+      //   scanType: ["qrCode"], // Scanning type, including QR code or bar code. Both by default.
+      //   success: function(res) {
+      //     alert("scan result: " + res.data.page + "::error code::" + res.error);
+      //   }
+      // };
+      ZaloPay.closeWindow();
+    }
+    
+  </script>
+   <button onclick="closeWebView()">Close Webview</button>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE HTML>
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -806,4 +851,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	</body>
 </html>
-
+ -->
