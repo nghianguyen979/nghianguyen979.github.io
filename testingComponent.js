@@ -6,7 +6,18 @@ function closeWindow() {
 
 function showDialog() {
     ZaloPay.ready(() => {
-      ZaloPay.showDialog();
+      ZaloPay.showDialog({
+          title: "Thông báo",
+          message: "Welcome to our sample testing",
+          positivebutton: "Đã hiểu",
+          negativebutton: "Bỏ qua"
+      });
+    });
+}
+
+function showLoading() {
+    ZaloPay.ready(() => {
+      ZaloPay.showLoading();
     });
 }
 
