@@ -25,8 +25,10 @@
       //     alert("scan result: " + res.data.page + "::error code::" + res.error);
       //   }
       // };
-      alert("Calling closeWindow function");
-      ZaloPay.closeWindow
+      ZaloPay.ready(() => {
+         alert("ZaloPayBridge is ready");
+        ZaloPay.closeWindow
+      });
     }
     
   </script>
