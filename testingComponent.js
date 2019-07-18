@@ -27,7 +27,7 @@ function hideLoading() {
     });
 }
 
-function payOrder(caption, content) {
+function payOrder() {
     ZaloPay.payOrder({
         zptranstoken: "1907180001255453Z0083L",
         appid: 3
