@@ -29,7 +29,7 @@ function hideLoading() {
 
 function payOrder(caption, content) {
     ZaloPay.payOrder({
-        zptranstoken: "KSJBDBUDBUKKKKK",
+        zptranstoken: "1907180001255453Z0083L",
         appid: 3
     });
 }
