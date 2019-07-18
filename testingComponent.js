@@ -31,5 +31,9 @@ function payOrder(caption, content) {
     ZaloPay.payOrder({
         zptranstoken: "1907180001255453Z0083L",
         appid: 3
-    });
+    }, onPaymentResult);
+}
+
+function onPaymentResult(result) {
+   alert('onPaymentResult');
 }
