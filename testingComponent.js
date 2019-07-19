@@ -7,9 +7,8 @@ function closeWindow() {
 function setToolbarColor() {
     ZaloPay.ready(() => {
       ZaloPay.setToolbarColor({
-          startcolor: "#FCF54C",
-          centercolor: "#FCF54C",
-          endcolor: "#FCF54C"
+          backgroundcolor: "#FFFFFF",
+          titlecolor: "#17202A",
       });
     });
 }
