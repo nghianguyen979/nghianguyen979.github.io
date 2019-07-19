@@ -4,6 +4,16 @@ function closeWindow() {
     });
 }
 
+function setToolbarColor() {
+    ZaloPay.ready(() => {
+      ZaloPay.setToolbarColor({
+          startcolor: "#FCF54C",
+          centercolor: "#FCF54C",
+          endcolor: "#FCF54C"
+      });
+    });
+}
+
 function showDialog() {
     ZaloPay.ready(() => {
       ZaloPay.showDialog({
