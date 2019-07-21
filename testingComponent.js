@@ -65,8 +65,17 @@ function forgotPass() {
     ZaloPay.forgotPassword();   
   });
 }
-                
+
+var fallbackToStore = function() {
+  window.location.replace('market://details?id=com.myapp.package');
+};
+var openApp = function() {
+  window.location.replace('your_uri_scheme://');
+};
+
 function triggerAppOpen() {
    alert('triggerAppOpen');
-   window.location = "https://go.zalopay.vn/f/launch";
+  openApp();
+  setTimeout(fallbackToStore, 250);
+  // window.location = "https://go.zalopay.vn/f/launch";
 }
