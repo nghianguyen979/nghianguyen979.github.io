@@ -66,6 +66,12 @@ function forgotPass() {
   });
 }
 
+function openZaloPayApp() {
+  ZaloPay.ready(() => {
+    ZaloPay.launchZaloPayApp();   
+  });
+}
+
 var fallbackToStore = function() {
   window.location.replace('market://details?id=vn.com.vng.zalopay');
 };
