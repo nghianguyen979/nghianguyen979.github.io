@@ -42,7 +42,15 @@ function payOrder() {
         appid: 3
     }, onPaymentResult);
 }
-
 function onPaymentResult(result) {
    alert('onPaymentResult');
 }
+
+function paymentCallback() {
+    ZaloPay.paymentCallback({
+        returncode: 1,
+        returnmessage: "Thanh toán thành công!",
+        zptranstoken, "1907210001255453Z0083L"
+});   
+}
+
