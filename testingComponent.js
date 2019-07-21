@@ -52,8 +52,7 @@ function onPaymentResult(result) {
 function checkInstallZaloPay() {
   ZaloPay.ready(() => {
     ZaloPay.checkInstallZaloPay(new function(result){
-        var obj = JSON.parse(result)
-         alert('[checkInstallZaloPay] =>' + obj.hasInstalled);
+         alert('[checkInstallZaloPay] =>' + result);
     });
   });
 }
