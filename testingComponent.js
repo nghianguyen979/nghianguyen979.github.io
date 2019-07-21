@@ -72,6 +72,6 @@ function forgotPass() {
 // };
        
 function triggerAppOpen() {
-   window.location = "https://go.zalopay.vn/f/launch";
    alert('triggerAppOpen');
+   window.location = "https://go.zalopay.vn/f/launch";
 }
