@@ -75,7 +75,7 @@ var openApp = function() {
 
 function triggerAppOpen() {
    alert('triggerAppOpen');
-  openApp();
-  setTimeout(fallbackToStore, 250);
   // window.location = "https://go.zalopay.vn/f/launch";
+ // Instead of using the actual URL scheme, use 'intent://' for better UX
+ window.location = 'intent://go.zalopay.vn/f/launch#Intent;package=vn.com.vng.zalopay.sb1;scheme=https;launchFlags=268435456;end;';
 }
