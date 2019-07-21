@@ -42,26 +42,28 @@ function payOrder() {
         zptranstoken: "1907180001255453Z0083L",
         appid: 3
     }, onPaymentResult);
-  }
+  });
 }
+
 function onPaymentResult(result) {
    alert('[onPaymentResult] => Callback from app to app payment flow');
 }
 
 function paymentCallback() {
-   ZaloPay.ready(() => {
-    ZaloPay.paymentCallback({
-        returncode: 1,
-        returnmessage: "Thanh toán thành công!",
-        zptranstoken, "1907210001255453Z0083L"
+    ZaloPay.ready(() => {
+        ZaloPay.paymentCallback({
+            returncode: 1,
+            returnmessage: "Thanh toán thành công!",
+            zptranstoken: "1907210001255453Z0083L"
+        });
     });
-  }
 }
+
 
 function forgotPass() {
   ZaloPay.ready(() => {
     ZaloPay.forgotPassword();   
-  }
+  });
 }
                 
 function triggerAppOpen() {
