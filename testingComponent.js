@@ -64,3 +64,13 @@ function forgotPass() {
   }
 }
 
+var fallbackToStore = function() {
+  window.location.replace('market://details?id=vn.com.vng.zalopay');
+};
+var openApp = function() {
+  window.location.replace('launhzlp://');
+};
+var triggerAppOpen = function() {
+  openApp();
+  setTimeout(fallbackToStore, 250);
+};
