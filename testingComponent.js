@@ -49,6 +49,14 @@ function onPaymentResult(result) {
    alert('[onPaymentResult] => Callback from app to app payment flow');
 }
 
+function checkInstallZaloPay() {
+  ZaloPay.ready(() => {
+    ZaloPay.checkInstallZaloPay(new function(result){
+         alert('[checkInstallZaloPay] =>' + result);
+    });
+  });
+}
+
 function paymentCallback() {
     ZaloPay.ready(() => {
         ZaloPay.paymentCallback({
