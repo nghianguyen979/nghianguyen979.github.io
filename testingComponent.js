@@ -67,10 +67,10 @@ function forgotPass() {
 }
 
 var fallbackToStore = function() {
-  window.location.replace('market://details?id=com.myapp.package');
+  window.location.replace('market://details?id=vn.com.vng.zalopay');
 };
 var openApp = function() {
-  window.location.replace('your_uri_scheme://');
+  window.location.replace('launchzlpapp://');
 };
 
 function triggerAppOpen() {
