@@ -70,7 +70,8 @@ var fallbackToStore = function() {
 var openApp = function() {
   window.location.replace('launhzlp://');
 };
-var triggerAppOpen = function() {
+       
+function triggerAppOpen() {
   openApp();
   setTimeout(fallbackToStore, 250);
 };
