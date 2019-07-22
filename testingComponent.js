@@ -51,7 +51,7 @@ function onPaymentResult(result) {
 
 function checkInstallZaloPay() {
   ZaloPay.ready(() => {
-    ZaloPay.checkInstallZaloPay(new function(result){
+    ZaloPay.checkInstallZaloPay(function(result){
          alert('[checkInstallZaloPay] =>' + result);
     });
   });
@@ -59,7 +59,7 @@ function checkInstallZaloPay() {
 
 function getUserInfo() {
   ZaloPay.ready(() => {
-    ZaloPay.getUserInfo(new function(result){
+    ZaloPay.getUserInfo(function(result){
          alert('[UserInfo] =>' + result);
     });
   });
