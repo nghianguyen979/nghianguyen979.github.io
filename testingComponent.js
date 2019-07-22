@@ -52,7 +52,7 @@ function onPaymentResult(result) {
 function checkInstallZaloPay() {
   ZaloPay.ready(() => {
     ZaloPay.checkInstallZaloPay(function(result){
-         alert('[checkInstallZaloPay] =>' + result);
+         alert('[checkInstallZaloPay] =>' + result.data.hasInstalled);
     });
   });
 }
