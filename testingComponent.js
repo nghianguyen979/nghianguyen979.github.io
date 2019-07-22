@@ -60,8 +60,24 @@ function checkInstallZaloPay() {
 function getUserInfo() {
   ZaloPay.ready(() => {
     ZaloPay.getUserInfo(function(result){
-         alert('[UserInfo] =>' + result);
-    });
+        var userInfo;
+            if ('undefined' !== result.data.platform) {
+               userInfo = userInfo + result.data.platform + '\n';
+            }
+            if ('undefined' !== result.data.deviceid) {
+               userInfo = userInfo + result.data.deviceid + '\n';
+            }
+            if ('undefined' !== result.data.appversion) {
+               userInfo = userInfo + result.data.appversion + '\n';
+            }
+            if ('undefined' !== result.data.osver) {
+               userInfo = userInfo + result.data.osver + '\n';
+            }
+            if ('undefined' !== result.data.devicemodel) {
+               userInfo = userInfo + result.data.devicemodel + '\n';
+            }
+            alert('[UserInfo] =>' + userInfo);
+        });
   });
 }
 
