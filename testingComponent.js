@@ -57,6 +57,14 @@ function checkInstallZaloPay() {
   });
 }
 
+function getUserInfo() {
+  ZaloPay.ready(() => {
+    ZaloPay.getUserInfo(new function(result){
+         alert('[UserInfo] =>' + result);
+    });
+  });
+}
+
 function paymentCallback() {
     ZaloPay.ready(() => {
         ZaloPay.paymentCallback({
