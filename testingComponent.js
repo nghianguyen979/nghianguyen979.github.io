@@ -62,9 +62,9 @@ function checkInstallZaloPay() {
   });
 }
 
-function getUserInfo() {
+function getDeviceInfo() {
   ZaloPay.ready(() => {
-    ZaloPay.getUserInfo(function(result){
+    ZaloPay.getDeviceInfo(function(result){
         var userInfo;
             if ('undefined' !== result.data.platform) {
                userInfo = userInfo + result.data.platform + '\n';
