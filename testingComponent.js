@@ -96,10 +96,15 @@ function paymentCallback() {
     });
 }
 
-
 function forgotPass() {
   ZaloPay.ready(() => {
     ZaloPay.forgotPassword();   
+  });
+}
+
+function hideExistButtonInToolbar() {
+  ZaloPay.ready(() => {
+    ZaloPay.hideExistButton();   
   });
 }
 
