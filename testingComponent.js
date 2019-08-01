@@ -105,7 +105,7 @@ function forgotPass() {
 function hideExistButtonInToolbar() {
   ZaloPay.ready(() => {
     ZaloPay.setExistButtonVisibility({
-        ishidden: true 
+        ishidden: false 
     });   
   });
 }
