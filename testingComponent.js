@@ -105,7 +105,7 @@ function forgotPass() {
 function hideExistButtonInToolbar() {
   ZaloPay.ready(() => {
     ZaloPay.setExistButtonVisibility({
-        ishidden: false 
+        isshow: false 
     });   
   });
 }
@@ -113,7 +113,7 @@ function hideExistButtonInToolbar() {
 function showExistButtonInToolbar() {
   ZaloPay.ready(() => {
     ZaloPay.setExistButtonVisibility({
-        ishidden: true 
+        isshow: true 
     });   
   });
 }
