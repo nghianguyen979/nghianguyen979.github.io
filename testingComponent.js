@@ -118,6 +118,12 @@ function showExistButtonInToolbar() {
   });
 }
 
+function redirectToStore() {
+  ZaloPay.ready(() => {
+    ZaloPay.navigateToStore();   
+  });
+}
+
 function openZaloPayApp() {
   ZaloPay.ready(() => {
     ZaloPay.launchZaloPayApp();   
