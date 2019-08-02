@@ -102,9 +102,9 @@ function forgotPass() {
   });
 }
 
-function hideExistButtonInToolbar() {
+function hideCancelButtonInToolbar() {
   ZaloPay.ready(() => {
-    ZaloPay.setExistButtonVisibility({
+    ZaloPay.setCancelButtonVisibility({
         isshow: false 
     });   
   });
