@@ -110,9 +110,9 @@ function hideExistButtonInToolbar() {
   });
 }
 
-function showExistButtonInToolbar() {
+function showCancelButtonInToolbar() {
   ZaloPay.ready(() => {
-    ZaloPay.setExistButtonVisibility({
+    ZaloPay.setCancelButtonVisibility({
         isshow: true 
     });   
   });
