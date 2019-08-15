@@ -1,8 +1,8 @@
-function closeWindow() {
-    ZaloPay.ready(() => {
-      ZaloPay.closeWindow();
-    });
-}
+// function closeWindow() {
+//     ZaloPay.ready(() => {
+//       ZaloPay.closeWindow();
+//     });
+// }
 
 function setToolbarColor() {
     ZaloPay.ready(() => {
