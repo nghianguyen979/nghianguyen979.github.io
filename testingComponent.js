@@ -1,5 +1,5 @@
 function closeWindow() {
-    ZaloPay.ready() => {
+    ZaloPay.ready() = {
       ZaloPay.closeWindow();
     });
 }
