@@ -1,11 +1,11 @@
-// function closeWindow() {
-//     ZaloPay.ready(() => {
-//       ZaloPay.closeWindow();
-//     });
-// }
+function closeWindow() {
+    ZaloPay.ready() => {
+      ZaloPay.closeWindow();
+    });
+}
 
 function setToolbarColor() {
-    ZaloPay.ready(() => {
+    ZaloPay.ready() => {
       ZaloPay.setToolbarColor({
           backgroundcolor: "#FFFFFF",
           titlecolor: "#17202A",
@@ -14,7 +14,7 @@ function setToolbarColor() {
 }
 
 function showDialog() {
-    ZaloPay.ready(() => {
+    ZaloPay.ready() => {
       ZaloPay.showDialog({
           title: "Thông báo",
           message: "Welcome to our sample testing",
@@ -25,13 +25,13 @@ function showDialog() {
 }
 
 function showLoading() {
-    ZaloPay.ready(() => {
+    ZaloPay.ready() => {
       ZaloPay.showLoading();
     });
 }
 
 function hideLoading() {
-    ZaloPay.ready(() => {
+    ZaloPay.ready() => {
       ZaloPay.hideLoading();
     });
 }
@@ -50,7 +50,7 @@ function onPaymentResult(result) {
 }
 
 function checkInstallZaloPay() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.checkInstallZaloPay(function(result){
           if ('undefined' !== result.data.hasInstalled) {
                alert('[checkInstallZaloPay] =>' + result.data.hasInstalled);
@@ -63,7 +63,7 @@ function checkInstallZaloPay() {
 }
 
 function getZPDKCommon() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.getZPDKCommon(function(result){
         var userInfo;
             if ('undefined' !== result.data.platform) {
@@ -87,7 +87,7 @@ function getZPDKCommon() {
 }
 
 function paymentCallback() {
-    ZaloPay.ready(() => {
+    ZaloPay.ready() => {
         ZaloPay.paymentCallback({
             returncode: 1,
             returnmessage: "Thanh toán thành công!",
@@ -97,13 +97,13 @@ function paymentCallback() {
 }
 
 function forgotPass() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.forgotPassword();   
   });
 }
 
 function hideCancelButtonInToolbar() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.setCancelButtonVisibility({
         isshow: false 
     });   
@@ -111,7 +111,7 @@ function hideCancelButtonInToolbar() {
 }
 
 function showCancelButtonInToolbar() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.setCancelButtonVisibility({
         isshow: true 
     });   
@@ -119,13 +119,13 @@ function showCancelButtonInToolbar() {
 }
 
 function redirectToStore() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.navigateToStore();   
   });
 }
 
 function openZaloPayApp() {
-  ZaloPay.ready(() => {
+  ZaloPay.ready() => {
     ZaloPay.launchZaloPayApp();   
   });
 }
