@@ -26,6 +26,21 @@
     </style>
   </head>
   
+  <p>Click the button to open a new browser window.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  //window.open("https://www.w3schools.com", '_blank');
+  var newwindow = window.open("https://www.w3schools.com", "myWindow", "width=300,height=400");
+  newwindow.onbeforeunload = function () {
+    // processing event here
+    alert("new window closed");
+  }
+}
+</script>
+  
   <body>
     <h2>Demo webapp for testing</h2>
     <p>Choose at least one funtion to test!</p>
