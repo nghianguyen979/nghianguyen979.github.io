@@ -39,6 +39,12 @@ function myFunction() {
     alert("new window closed");
   }
 }
+  
+  
+function showFileName() {
+   var fil = document.getElementById("myFile");
+   alert(fil.value);
+}
 </script>
   
   <body>
@@ -78,7 +84,7 @@ function myFunction() {
       <tr>
         <div>
          <label for="file">Choose file to upload</label>
-         <input type="file" id="file" name="file" multiple>
+         <input type="file" id="myFile" name="file" multiple>
        </div>
       </tr>
       </table>
