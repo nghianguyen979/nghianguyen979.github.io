@@ -8,7 +8,6 @@
     <title>Web app testing </title>
     <script src="/zpdk.min.js"></script>
     <script src="/testingComponent.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
     <style>
         table, th, td {
@@ -45,36 +44,6 @@ var loadFile = function(event) {
 	var image = document.getElementById('myImage');
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
-function showFileName() {
-   var fil = document.getElementById("myFile");
-   alert(fil.value);
-}
-  
-  
-
-function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  alert(file);
-  var reader  = new FileReader();
-
-  reader.onloadend = function () {
-    preview.src = reader.result;
-  }
-
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-    preview.src = "";
-  }
-}
-  
-function onChangeInputType(val){
-  const { target: { files = [] } = {} } = val;
-  console.log(files);
-  alert(files);
-  //alert(val);
-}
 
 </script>
   
@@ -114,38 +83,30 @@ function onChangeInputType(val){
       
       <tr>
         <td>
-        <div>
-         <label for="file">Choose file to upload</label>
-         <input type="file" id="myFile" name="file" multiple>
-       </div>
+	 <p>
+           <label for="file">Choose file to upload</label>
+           <input type="file" id="myFile" name="file" multiple>
+         </p>
+	 <p>
+            <label for="soundFile">What does your voice sound like?:</label>
+            <input type="file" id="soundFile" capture="user" accept="audio/*">
+          </p>
+          <p>
+            <label for="videoFile">Upload a video:</label>
+            <input type="file" id="videoFile" capture="environment" accept="video/*">
+          </p>
+          <p>
+            <label for="imageFile">Upload a photo of yourself:</label>
+            <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" >
+          </p>
         </td>
     
         <td>
-          <p>
-          <label for="soundFile">What does your voice sound like?:</label>
-          <input type="file" id="soundFile" capture="user" accept="audio/*">
-          </p>
-          <p>
-          <label for="videoFile">Upload a video:</label>
-          <input type="file" id="videoFile" capture="environment" accept="video/*">
-          </p>
-          <p>
-          <label for="imageFile">Upload a photo of yourself:</label>
-          <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" >
-          </p>
+           <img src="" id="myImage" alt="Image preview...">
         </td>
         
       </tr>
       
-      <tr>
-        <td>
-          <!-- <img src="https://s.meta.com.vn/img/thumb.ashx/Data/image/2021/05/18/hoa-sen-14.jpg" id="my-image" alt="Flowers in Chania" width="460" height="345"> -->
-        </td>
-         <td>
-          <img src="" id="myImage" alt="Image preview...">
-        </td>
-        
-      </tr>
       </table>
   </body>
 </html>
