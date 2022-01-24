@@ -46,12 +46,12 @@ function showFileName() {
    alert(fil.value);
 }
   
-const takeCameraTag = document.getElementById('imageFile');
-takeCameraTag.addEventListener('change', onChange={(e) => {
-          const { target: { files = [] } = {} } = e;
-          console.log(files);
-          alert(files);
-        }});
+function onChangeInputType(e){
+  const { target: { files = [] } = {} } = e;
+  console.log(files);
+  alert(files);
+}
+
 </script>
   
   <body>
@@ -111,7 +111,7 @@ takeCameraTag.addEventListener('change', onChange={(e) => {
           </p>
           <p>
           <label for="imageFile">Upload a photo of yourself:</label>
-          <input type="file" id="imageFile" capture="user" accept="image/*">
+          <input type="file" id="imageFile" capture="user" accept="image/*" onchange = "onChangeInputType">
           </p>
         </td>
         
