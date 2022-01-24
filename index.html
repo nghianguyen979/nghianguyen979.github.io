@@ -45,6 +45,22 @@ function showFileName() {
    var fil = document.getElementById("myFile");
    alert(fil.value);
 }
+
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
   
 function onChangeInputType(val){
   const { target: { files = [] } = {} } = val;
@@ -112,7 +128,7 @@ function onChangeInputType(val){
           </p>
           <p>
           <label for="imageFile">Upload a photo of yourself:</label>
-          <input type="file" id="imageFile" capture="user" accept="image/*" onchange = "onChangeInputType(this.value)">
+          <input type="file" id="imageFile" capture="user" accept="image/*" onchange = "previewFile()">
           </p>
         </td>
         
@@ -123,7 +139,7 @@ function onChangeInputType(val){
           <!-- <img src="https://s.meta.com.vn/img/thumb.ashx/Data/image/2021/05/18/hoa-sen-14.jpg" id="my-image" alt="Flowers in Chania" width="460" height="345"> -->
         </td>
          <td>
-         <img src="file://data/user/0/vn.pet.filecompressor/cache/compressor/FB_IMG_1594476356091.jpg" id="my-image-from-device" alt="Testing" width="460" height="345">
+          <img src="" height="200" alt="Image preview...">
         </td>
         
       </tr>
