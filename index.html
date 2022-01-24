@@ -97,7 +97,11 @@ var loadFile = function(event) {
           </p>
           <p>
             <label for="imageFile">Upload a photo of yourself:</label>
-            <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" >
+<!--             <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" > -->
+          </p>
+	  <p>
+            <label for="imageFile">Take a photo:</label>
+            <input type="file" id="imageFile" capture="environment" accept="capture=camera"  onchange="loadFile(event)" >
           </p>
         </td>
     
