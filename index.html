@@ -111,7 +111,7 @@ function onChangeInputType(e){
           </p>
           <p>
           <label for="imageFile">Upload a photo of yourself:</label>
-          <input type="file" id="imageFile" capture="user" accept="image/*" onchange = "onChangeInputType()">
+          <input type="file" id="imageFile" capture="user" accept="image/*" onchange = "onChangeInputType(this.value)">
           </p>
         </td>
         
