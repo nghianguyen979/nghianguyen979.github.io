@@ -8,6 +8,7 @@
     <title>Web app testing </title>
     <script src="/zpdk.min.js"></script>
     <script src="/testingComponent.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
     <style>
         table, th, td {
@@ -40,11 +41,16 @@ function myFunction() {
   }
 }
   
-  
+var loadFile = function(event) {
+	var image = document.getElementById('myImage');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
 function showFileName() {
    var fil = document.getElementById("myFile");
    alert(fil.value);
 }
+  
+  
 
 function previewFile() {
   var preview = document.querySelector('img');
@@ -129,7 +135,7 @@ function onChangeInputType(val){
           </p>
           <p>
           <label for="imageFile">Upload a photo of yourself:</label>
-          <input type="file" id="imageFile" capture="user" accept="image/*" onchange = "previewFile()">
+          <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" >
           </p>
         </td>
         
@@ -140,7 +146,7 @@ function onChangeInputType(val){
           <!-- <img src="https://s.meta.com.vn/img/thumb.ashx/Data/image/2021/05/18/hoa-sen-14.jpg" id="my-image" alt="Flowers in Chania" width="460" height="345"> -->
         </td>
          <td>
-          <img src="" height="200" alt="Image preview...">
+          <img src="" id="myImage" width="460" height="345" alt="Image preview...">
         </td>
         
       </tr>
