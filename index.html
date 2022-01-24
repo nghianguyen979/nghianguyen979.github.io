@@ -45,6 +45,13 @@ function showFileName() {
    var fil = document.getElementById("myFile");
    alert(fil.value);
 }
+  
+const takeCameraTag = document.getElementById('imageFile');
+takeCameraTag.addEventListener('change', onChange={(e) => {
+          const { target: { files = [] } = {} } = e;
+          console.log(files);
+          alert(files);
+        }});
 </script>
   
   <body>
