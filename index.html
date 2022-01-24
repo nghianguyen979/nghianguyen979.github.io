@@ -46,10 +46,10 @@ function showFileName() {
    alert(fil.value);
 }
   
-function onChangeInputType(e){
-  const { target: { files = [] } = {} } = e;
+function onChangeInputType(val){
+  const { target: { files = [] } = {} } = val;
   console.log(files);
-  alert(files);
+  alert(val);
 }
 
 </script>
