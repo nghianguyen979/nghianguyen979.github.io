@@ -49,6 +49,7 @@ function showFileName() {
 function previewFile() {
   var preview = document.querySelector('img');
   var file    = document.querySelector('input[type=file]').files[0];
+  alert(file);
   var reader  = new FileReader();
 
   reader.onloadend = function () {
