@@ -1,51 +1,51 @@
 function closeWindow() {
-    ZaloPay.ready() = {
-     closeWindow();
-    });
+  ZaloPay.ready(() => {
+    closeWindow();
+  });
 }
 
 function setToolbarColor() {
-    ZaloPay.ready() => {
-      ZaloPay.setToolbarColor({
-          backgroundcolor: "#FFFFFF",
-          titlecolor: "#17202A",
-      });
+  ZaloPay.ready(() => {
+    ZaloPay.setToolbarColor({
+      backgroundcolor: "#FFFFFF",
+      titlecolor: "#17202A",
     });
+  });
 }
 
 function showDialog() {
-    ZaloPay.ready() => {
-      ZaloPay.showDialog({
-          title: "Thông báo",
-          message: "Welcome to our sample testing",
-          positivebutton: "Đã hiểu",
-          negativebutton: "Bỏ qua"
-      });
+  ZaloPay.ready(() => {
+    ZaloPay.showDialog({
+      title: "Thông báo",
+      message: "Welcome to our sample testing",
+      positivebutton: "Đã hiểu",
+      negativebutton: "Bỏ qua"
     });
+  });
 }
 
 function showLoading() {
-    ZaloPay.ready() => {
-      ZaloPay.showLoading();
-    });
+  ZaloPay.ready(() => {
+    ZaloPay.showLoading();
+  });
 }
 
 function hideLoading() {
-    ZaloPay.ready() => {
-      ZaloPay.hideLoading();
-    });
+  ZaloPay.ready(() => {
+    ZaloPay.hideLoading();
+  });
 }
 
 function payOrder() {
-   ZaloPay.ready(() => {
+  ZaloPay.ready(() => {
     ZaloPay.payOrder({
-        zptranstoken: "1907180001255453Z0083L",
-        appid: 3
+      zptranstoken: "1907180001255453Z0083L",
+      appid: 3
     }, onPaymentResult);
   });
 }
 
-function takePhoto(){
+function takePhoto() {
   alert('call takePhoto');
   ZaloPay.ready(() => {
     ZaloPay.openCamera({
@@ -54,105 +54,105 @@ function takePhoto(){
   });
 }
 
-function onCameraResult(result){
+function onCameraResult(result) {
   alert('onCameraResult');
 }
 
 function onPaymentResult(result) {
-   alert('[onPaymentResult] => Callback from app to app payment flow');
+  alert('[onPaymentResult] => Callback from app to app payment flow');
 }
 
 function checkInstallZaloPay() {
-  ZaloPay.ready() => {
-    ZaloPay.checkInstallZaloPay(function(result){
-          if ('undefined' !== result.data.hasInstalled) {
-               alert('[checkInstallZaloPay] =>' + result.data.hasInstalled);
-          }else{
-               alert('[checkInstallZaloPay] => No result found');
-          }
-        
+  ZaloPay.ready(() => {
+    ZaloPay.checkInstallZaloPay(function (result) {
+      if ('undefined' !== result.data.hasInstalled) {
+        alert('[checkInstallZaloPay] =>' + result.data.hasInstalled);
+      } else {
+        alert('[checkInstallZaloPay] => No result found');
+      }
+
     });
   });
 }
 
 function getZPDKCommon() {
-  ZaloPay.ready() => {
-    ZaloPay.getZPDKCommon(function(result){
-        var userInfo;
-            if ('undefined' !== result.data.platform) {
-               userInfo = userInfo + result.data.platform + '\n';
-            }
-            if ('undefined' !== result.data.deviceid) {
-               userInfo = userInfo + result.data.deviceid + '\n';
-            }
-            if ('undefined' !== result.data.appversion) {
-               userInfo = userInfo + result.data.appversion + '\n';
-            }
-            if ('undefined' !== result.data.osver) {
-               userInfo = userInfo + result.data.osver + '\n';
-            }
-            if ('undefined' !== result.data.devicemodel) {
-               userInfo = userInfo + result.data.devicemodel + '\n';
-            }
-            alert('[UserInfo] =>' + userInfo);
-        });
+  ZaloPay.ready(() => {
+    ZaloPay.getZPDKCommon(function (result) {
+      var userInfo;
+      if ('undefined' !== result.data.platform) {
+        userInfo = userInfo + result.data.platform + '\n';
+      }
+      if ('undefined' !== result.data.deviceid) {
+        userInfo = userInfo + result.data.deviceid + '\n';
+      }
+      if ('undefined' !== result.data.appversion) {
+        userInfo = userInfo + result.data.appversion + '\n';
+      }
+      if ('undefined' !== result.data.osver) {
+        userInfo = userInfo + result.data.osver + '\n';
+      }
+      if ('undefined' !== result.data.devicemodel) {
+        userInfo = userInfo + result.data.devicemodel + '\n';
+      }
+      alert('[UserInfo] =>' + userInfo);
+    });
   });
 }
 
 function paymentCallback() {
-    ZaloPay.ready() => {
-        ZaloPay.paymentCallback({
-            returncode: 1,
-            returnmessage: "Thanh toán thành công!",
-            zptranstoken: "1907210001255453Z0083L"
-        });
+  ZaloPay.ready(() => {
+    ZaloPay.paymentCallback({
+      returncode: 1,
+      returnmessage: "Thanh toán thành công!",
+      zptranstoken: "1907210001255453Z0083L"
     });
+  });
 }
 
 function forgotPass() {
-  ZaloPay.ready() => {
-    ZaloPay.forgotPassword();   
+  ZaloPay.ready(() => {
+    ZaloPay.forgotPassword();
   });
 }
 
 function hideCancelButtonInToolbar() {
-  ZaloPay.ready() => {
+  ZaloPay.ready(() => {
     ZaloPay.setCancelButtonVisibility({
-        isshow: false 
-    });   
+      isshow: false
+    });
   });
 }
 
 function showCancelButtonInToolbar() {
-  ZaloPay.ready() => {
+  ZaloPay.ready(() => {
     ZaloPay.setCancelButtonVisibility({
-        isshow: true 
-    });   
+      isshow: true
+    });
   });
 }
 
 function redirectToStore() {
-  ZaloPay.ready() => {
-    ZaloPay.navigateToStore();   
+  ZaloPay.ready(() => {
+    ZaloPay.navigateToStore();
   });
 }
 
 function openZaloPayApp() {
-  ZaloPay.ready() => {
-    ZaloPay.launchZaloPayApp();   
+  ZaloPay.ready(() => {
+    ZaloPay.launchZaloPayApp();
   });
 }
 
-var fallbackToStore = function() {
+var fallbackToStore = function () {
   window.location.replace('market://details?id=vn.com.vng.zalopay');
 };
-var openApp = function() {
+var openApp = function () {
   window.location.replace('launchzlpapp://');
 };
 
 function triggerAppOpen() {
-   alert('triggerAppOpen');
+  alert('triggerAppOpen');
   // window.location = "https://go.zalopay.vn/f/launch";
- // Instead of using the actual URL scheme, use 'intent://' for better UX
- window.location = 'intent://go.zalopay.vn/f/launch#Intent;package=vn.com.vng.zalopay.sb1;scheme=https;launchFlags=268435456;end;';
+  // Instead of using the actual URL scheme, use 'intent://' for better UX
+  window.location = 'intent://go.zalopay.vn/f/launch#Intent;package=vn.com.vng.zalopay.sb1;scheme=https;launchFlags=268435456;end;';
 }
