@@ -1,121 +1,142 @@
 <!DOCTYPE html>
 <!-- Created by NghiaNPT -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <title>Web app testing </title>
-    <script src="/zpdk.min.js"></script>
-    <script src="/testingComponent.js"></script>
-    
-    <style>
-        table, th, td {
-          border: 0.5px solid black;
-          border-collapse: collapse;
-        }
-        th, td {
-          padding: 5px;
-          text-align: left;   
-        }
-        button {
-          display: inline-block;   /* this shouldn't be needed on a button though */
-          width: 100%;
-          height: 100%;
-        }
-    </style>
-  </head>
-  
-  <p>Click the button to open a new browser window.</p>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>Web app testing </title>
+  <script src="/zpdk.min.js"></script>
+  <script src="/testingComponent.js"></script>
+
+  <style>
+    table,
+    th,
+    td {
+      border: 0.5px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+    }
+
+    button {
+      display: inline-block;
+      /* this shouldn't be needed on a button though */
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<p>Click the button to open a new browser window.</p>
 
 <button onclick="myFunction()">Try it</button>
 
 <script>
-function myFunction() {
-  //window.open("https://www.w3schools.com", '_blank');
-  var newwindow = window.open("https://www.w3schools.com", "myWindow", "width=300,height=400");
-  newwindow.onbeforeunload = function () {
-    // processing event here
-    alert("new window closed");
+  function myFunction() {
+    //window.open("https://www.w3schools.com", '_blank');
+    var newwindow = window.open("https://www.w3schools.com", "myWindow", "width=300,height=400");
+    newwindow.onbeforeunload = function () {
+      // processing event here
+      alert("new window closed");
+    }
   }
-}
-  
-var loadFile = function(event) {
-	var image = document.getElementById('myImage');
-	image.src = URL.createObjectURL(event.target.files[0]);
-};
+
+  var loadFile = function (event) {
+    var image = document.getElementById('myImage');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
 
 </script>
-  
-  <body>
-    <h2>Demo webapp for testing</h2>
-    <p>Choose at least one funtion to test!</p>
-    <table style="width:100%">
-        <tr>
-          <td> <button onclick="closeWindow()">Close WebView</button></td>
-          <td> <button onclick="showLoading()">Show Loading</button></td>
-          <td> <button onclick="hideLoading()">Hide Loading</button></td>
-        </tr>
-      
-        <tr>
-          <td colspan="1"> <button onclick="showDialog()">Show Dialog</button></td>
-          <td colspan="1"> <button onclick="payOrder()">Pay(App To App)</button></td>
-          <td colspan="1"> <button onclick="setToolbarColor()">Set Toolbar Color</button></td>
-        </tr>
-      
-       <tr>
-          <td colspan="1"> <button onclick="paymentCallback()">Web Payment Callback</button></td>
-          <td colspan="1"> <button onclick="forgotPass()">Forgot Password</button></td>
-          <td colspan="1"> <button onclick="openZaloPayApp()">Open ZaloPay App</button></td>
-        </tr>
-      
-        <tr>
-          <td colspan="1"> <button onclick="checkInstallZaloPay()">Check ZaloPay Installed?</button></td>
-          <td colspan="1"> <button onclick="getZPDKCommon()">GetZPDKCommon</button></td>
-          <td colspan="1"> <button onclick="hideCancelButtonInToolbar()">Hide Exist Button In Toolbar</button></td>
-        </tr>
-      
-       <tr>
-          <td colspan="1"> <button onclick="showCancelButtonInToolbar()">Show Exist Button In Toolbar</button></td>
-          <td colspan="1"> <button onclick="redirectToStore()">Navigate To Store</button></td>
-          <td colspan="1"> <button onclick="location.href='zalopay://merchant/link?source=web&browser=chrome&requestid=-1_190819000000537&appid=3';">Test Deeplink</button></td>
-      </tr>
-      
-      <tr>
-        <td>
-	 <p>
-           <label for="file">Choose file to upload</label>
-           <input type="file" id="myFile" name="file" multiple>
-         </p>
-	 <p>
-            <label for="soundFile">What does your voice sound like?:</label>
-            <input type="file" id="soundFile" capture="user" accept="audio/*">
-          </p>
-          <p>
-            <label for="videoFile">Upload a video:</label>
-            <input type="file" id="videoFile" capture="environment" accept="video/*">
-          </p>
-          <p>
-            <label for="imageFile">Upload a photo of yourself:</label>
-<!--             <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" > -->
-          </p>
-	  <p>
-            <label for="imageFile">Take a photo:</label>
-            <input type="file" id="imageFile" capture="environment" accept="image/*"  onchange="loadFile(event)" >
-          </p>
-        </td>
-    
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-	 <td>
-           <img src="" id="myImage"  width="200" alt="Image preview...">
-        </td>
-        <td></td>
-	<td></td>
-      </tr>
-      
-      </table>
-  </body>
+
+<body>
+  <h2>Demo webapp for testing</h2>
+  <p>Choose at least one funtion to test!</p>
+  <table style="width:100%">
+    <tr>
+      <td> <button onclick="closeWindow()">Close WebView</button></td>
+      <td> <button onclick="showLoading()">Show Loading</button></td>
+      <td> <button onclick="hideLoading()">Hide Loading</button></td>
+    </tr>
+
+    <tr>
+      <td colspan="1"> <button onclick="showDialog()">Show Dialog</button></td>
+      <td colspan="1"> <button onclick="payOrder()">Pay(App To App)</button></td>
+      <td colspan="1"> <button onclick="setToolbarColor()">Set Toolbar Color</button></td>
+    </tr>
+
+    <tr>
+      <td colspan="1"> <button onclick="paymentCallback()">Web Payment Callback</button></td>
+      <td colspan="1"> <button onclick="forgotPass()">Forgot Password</button></td>
+      <td colspan="1"> <button onclick="openZaloPayApp()">Open ZaloPay App</button></td>
+    </tr>
+
+    <tr>
+      <td colspan="1"> <button onclick="checkInstallZaloPay()">Check ZaloPay Installed?</button></td>
+      <td colspan="1"> <button onclick="getZPDKCommon()">GetZPDKCommon</button></td>
+      <td colspan="1"> <button onclick="hideCancelButtonInToolbar()">Hide Exist Button In Toolbar</button></td>
+    </tr>
+
+    <tr>
+      <td colspan="1"> <button onclick="showCancelButtonInToolbar()">Show Exist Button In Toolbar</button></td>
+      <td colspan="1"> <button onclick="redirectToStore()">Navigate To Store</button></td>
+      <td colspan="1"> <button
+          onclick="location.href='zalopay://merchant/link?source=web&browser=chrome&requestid=-1_190819000000537&appid=3';">Test
+          Deeplink</button></td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>
+          <label for="file">Choose file to upload</label>
+          <input type="file" id="myFile" name="file" multiple>
+        </p>
+        <p>
+          <label for="soundFile">What does your voice sound like?:</label>
+          <input type="file" id="soundFile" capture="user" accept="audio/*">
+        </p>
+        <p>
+          <label for="videoFile">Upload a video:</label>
+          <input type="file" id="videoFile" capture="environment" accept="video/*">
+        </p>
+        <p>
+          <label for="imageFile">Upload a photo of yourself:</label>
+          <!--             <input type="file" id="imageFile" capture="user" accept="image/*"  onchange="loadFile(event)" > -->
+        </p>
+        <p>
+          <label for="imageFile">Take a photo:</label>
+          <input type="file" id="imageFile" capture="environment" accept="image/*" onchange="loadFile(event)">
+        </p>
+      </td>
+
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <img src="" id="myImage" width="200" alt="Image preview...">
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>
+        <button onclick="takePhoto()">Open camera from native</button>
+      </td>
+      <td>
+        <img src="" id="myImageFromCamera" width="200" alt="Image preview...">
+      </td>
+      </td>
+      <td></td>
+    </tr>
+
+  </table>
+</body>
+
 </html>
