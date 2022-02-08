@@ -45,6 +45,18 @@ function payOrder() {
   });
 }
 
+function takePhoto(){
+  ZaloPay.ready(() => {
+    ZaloPay.openCamera({
+      cameraselector: 1
+    }, onCameraResult);
+  });
+}
+
+function onCameraResult(result){
+  alert('onCameraResult');
+}
+
 function onPaymentResult(result) {
    alert('[onPaymentResult] => Callback from app to app payment flow');
 }
