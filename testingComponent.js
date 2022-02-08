@@ -46,6 +46,7 @@ function payOrder() {
 }
 
 function takePhoto(){
+  alert('call takePhoto');
   ZaloPay.ready(() => {
     ZaloPay.openCamera({
       cameraselector: 1
