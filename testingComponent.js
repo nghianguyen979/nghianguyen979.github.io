@@ -58,8 +58,12 @@ function takePhoto() {
 function openPinAuth() {
   alert('call openPinAuth');
   ZaloPay.ready(() => {
-    ZaloPay.openPinAuthentication();
+    ZaloPay.openPinAuthentication(onPinAuthResult);
   });
+}
+
+function onPinAuthResult(result) {
+  alert('onPinAuthResult');
 }
 
 function onCameraResult(result) {
