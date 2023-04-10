@@ -54,6 +54,14 @@ function takePhoto() {
   });
 }
 
+
+function openPinAuth() {
+  alert('call openPinAuth');
+  ZaloPay.ready(() => {
+    ZaloPay.openPinAuthentication();
+  });
+}
+
 function onCameraResult(result) {
   alert('onCameraResult');
 }
