@@ -63,7 +63,7 @@ function openPinAuth() {
 }
 
 function onPinAuthResult(result) {
-  alert('onPinAuthResult');
+  alert('onPinAuthResult => HashPin: ' + result[hashdata]);
 }
 
 function onCameraResult(result) {
