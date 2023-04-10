@@ -63,12 +63,12 @@ function openPinAuth() {
 }
 
 function onPinAuthResult(result) {
-  if ('undefined' !== result.data.hashdata) {
-    alert('onPinAuthResult => HashPin: ' + result.data.hashdata);
-  }
-  
- 
-  alert('onPinAuthResult => ' + result);
+   if ('undefined' !== result.error && result.error == 1) {
+     
+      alert('Success => HashPin: ' + result.data.hashdata);
+   } else {
+      alert('Failed => Message' + result.errorMessage);
+   }
 }
 
 function onCameraResult(result) {
