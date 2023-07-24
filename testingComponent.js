@@ -134,11 +134,13 @@ function forgotPass() {
 
 function launchDeeplinkFromUMScope() {
   ZaloPayUM.ready(() => {
-    ZaloPayUM.launchDeeplink({url : "zalopay://launch/app/1314?source_tracking=home_more"}, onDeeplinkResult);
+    ZaloPayUM.launchDeeplink({
+      url : "zalopay://launch/app/1314?source_tracking=home_more"
+    }, onDeeplinkResult);
   });
 }
 
-function onDeeplinkResult(result) {
+function onDeeplinkResult() {
   alert('onDeeplink Called!');
 }
 
