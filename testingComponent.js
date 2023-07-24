@@ -132,6 +132,12 @@ function forgotPass() {
   });
 }
 
+function launchDeeplinkFromUMScope() {
+  ZaloPayUM.ready(() => {
+    ZaloPayUM.launchDeeplink("zalopay://launch/app/1314?source_tracking=home_more");
+  });
+}
+
 function hideCancelButtonInToolbar() {
   ZaloPay.ready(() => {
     ZaloPay.setCancelButtonVisibility({
