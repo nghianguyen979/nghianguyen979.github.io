@@ -63,9 +63,20 @@ function openPinAuth() {
 }
 
 function triggerSavingOTPConfig() {
+  let jsonString = `
+  {"algorithm":2,"digits":6,"period":30,"secret_key":"HRPSSAEXEUAAKSFURUMKDI5RUGMPHZGO","smart_otp_id":"d269496b-3d1c-43bc-8195-b6b0b3d2cf7e"}
+  `;
+  
   alert('call triggerSavingOTPConfig');
+  alert(jsonString);
+  
   ZaloPay.ready(() => {
-    ZaloPay.saveSmartOtpConfig(onSavingSmartOTPResult);
+    ZaloPay.saveSmartOtpConfig(
+      {
+        config: jsonString,
+        userId: '230406000004269'
+      },
+      onSavingSmartOTPResult);
   });
 }
 
