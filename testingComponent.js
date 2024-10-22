@@ -62,6 +62,22 @@ function openPinAuth() {
   });
 }
 
+function triggerSavingOTPConfig() {
+  alert('call triggerSavingOTPConfig');
+  ZaloPay.ready(() => {
+    ZaloPay.saveSmartOtpConfig(onSavingSmartOTPResult);
+  });
+}
+
+function onSavingSmartOTPResult(result) {
+   if ('undefined' !== result.error && result.error == 1) {
+     
+      alert('Success');
+   } else {
+      alert('Failed => Message' + result.errorMessage);
+   }
+}
+
 function onPinAuthResult(result) {
    if ('undefined' !== result.error && result.error == 1) {
      
